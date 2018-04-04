@@ -12,6 +12,7 @@ const vm = {
     },
 
     data: () => _.assign({
+        currentPage: 0,
         formitem: {},
         fields: [],
         message: '',
@@ -47,6 +48,12 @@ const vm = {
                         window.location.replace(data.submission.redirect);
                     }
                 }, res => this.error = this.$trans(res.data.message || res.data));
+        },
+        back() {
+            window.$formmaker.currentPage -= 1;
+        },
+        forth() {
+            window.$formmaker.currentPage += 1;
         },
 
     },

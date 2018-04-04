@@ -64,6 +64,7 @@
             </div>
             <div class="pk-table-width-minimum"><input type="checkbox" name="id" value="{{ field.id }}"
             @click="toggleSelect(field)"></div>
+            <div class="pk-table-width-minimum"><span>{{ field.page }}</span></div>
             <div class="pk-table-min-width-100">
             <a v-if="type" @click.prevent="$root.editFormField(field.id)">{{ field.label }}</a>
             <span v-else>{{ field.label }}</span>

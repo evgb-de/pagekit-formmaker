@@ -75,6 +75,7 @@ export default {
             type: '',
             priority: 0,
             form_id: 0,
+            page: 0,
             data: {
                 value: [],
                 data: {},
